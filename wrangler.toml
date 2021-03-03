@@ -5,14 +5,16 @@ type = "webpack"
 webpack_config = "node_modules/flareact/webpack"
 
 [triggers]
-crons = ["* * * * *"]
+crons = ["*/5 * * * *"]
 
 [site]
 bucket = "out"
 entry-point = "./"
 
 # uncomment and adjust following if you are not using GitHub Actions
-#[env.production]
-#kv-namespaces = [{binding="KV_STATUS_PAGE", id="xxxx", preview_id=""}]
+[env.production]
+kv-namespaces = [{binding="KV_STATUS_PAGE", id="920e8943eedf4b238915574f104253ec", preview_id=""}]
 #zone_id="xxx"
 #route="xxx"
+
+SECRET_DISCORD_WEBHOOK_URL = "https://canary.discord.com/api/webhooks/816475919270019152/7APssmS5z90KmqBXInW5_ZKWQy_Iob2SgLQsmC_gAQ9-KaZtdb1CRJmYF3fT0tc6IUb6"
